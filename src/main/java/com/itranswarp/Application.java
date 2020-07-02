@@ -19,7 +19,7 @@ import com.itranswarp.web.support.MvcConfiguration;
  */
 @SpringBootApplication
 @EnableScheduling
-@EnableAutoConfiguration
+//@EnableAutoConfiguration
 @Import({ ApplicationConfiguration.class, MvcConfiguration.class })
 public class Application {
 
