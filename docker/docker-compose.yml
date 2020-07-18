@@ -13,7 +13,7 @@ services:
         - 0.0.0.0:80:80
         - 0.0.0.0:443:443
       volumes:
-        - /etc/localtime:/etc/localtime:ro
+#        - /etc/localtime:/etc/localtime:ro
         - ../:/srv
         - ./nginx/nginx/nginx.conf:/etc/nginx/conf.d/nginx.conf
         - ./nginx/log:/srv/itranswarp/log
@@ -38,7 +38,7 @@ services:
         - mysql
         - redis
       volumes:
-        - /etc/localtime:/etc/localtime:ro
+#        - /etc/localtime:/etc/localtime:ro
         - ../:/srv
       env_file:
         - ./.env 
@@ -58,7 +58,7 @@ services:
       ports:
         - 0.0.0.0:16379:6379
       volumes:
-        - /etc/localtime:/etc/localtime:ro
+#        - /etc/localtime:/etc/localtime:ro
         - ./redis:/data
   mysql:
       image: mysql:5.7
@@ -67,7 +67,7 @@ services:
       ports:
         - 0.0.0.0:13306:3306
       volumes:
-        - /etc/localtime:/etc/localtime:ro
+#        - /etc/localtime:/etc/localtime:ro
         - ./mysql/data:/var/lib/mysql 
         - ./mysql/my.cnf:/etc/my.cnf
         - ./mysql/init:/docker-entrypoint-initdb.d
