@@ -14,9 +14,9 @@ spring:
 
   # mysql configuration:
   datasource:
-    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:it}?useSSL=${DB_SSL:false}&characterEncoding=${DB_ENCODING:utf8}
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:13306}/${DB_NAME:it}?useSSL=${DB_SSL:false}&characterEncoding=${DB_ENCODING:utf8}
     username: ${DB_USERNAME:root}
-    password: ${DB_PASSWORD:password}
+    password: ${DB_PASSWORD:123456}
     driver-class-name: com.mysql.jdbc.Driver
     hikari:
       pool-name: HikariCP
@@ -31,9 +31,9 @@ spring:
   redis:
     standalone:
       host: ${REDIS_HOST:localhost}
-      port: ${REDIS_PORT:6379}
-      database: ${REDIS_DATABASE:0}
-      password: ${REDIS_PASSWORD:}
+      port: ${REDIS_PORT:16379}
+      database: ${REDIS_DATABASE:3}
+      password: ${REDIS_PASSWORD:JFPRJ}
       timeout: ${REDIS_TIMEOUT:1}
 
   # security configuration:
