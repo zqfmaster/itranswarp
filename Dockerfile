@@ -7,4 +7,4 @@ RUN mvn -DskipTests=true clean package
 
 EXPOSE 2019
 
-CMD ["java", "-jar", "release/itranswarp.jar"]
+CMD ["java", "-jar", "target/itranswarp.jar"]
